@@ -9,7 +9,7 @@ TEMPLATES = JinjaTemplate(current_file_path / "templates")
 
 @app.get("/")
 async def h(request):
-    return jsonify({"msg": "hello world!"})
+    return jsonify({"msg": "hello world!", "version": "0.0.2"})
 
 @app.get("/logger")
 async def logger(request: Request):
