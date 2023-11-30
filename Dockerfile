@@ -7,7 +7,8 @@ WORKDIR /app
 COPY . /app/
 
 RUN pip install "poetry==$POETRY_VERSION"
-RUN poetry install $(test "$YOUR_ENV" == production && echo "--no-dev")
+
+RUN poetry install
 
 EXPOSE 8080
 
