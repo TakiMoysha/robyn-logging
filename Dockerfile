@@ -10,10 +10,11 @@ RUN ls -l /app
 
 
 RUN pip install "poetry==$POETRY_VERSION"
-RUN poetry install $(test "$YOUR_ENV" == production && echo "--no-dev")
 
 COPY . /app/
 RUN ls -l /app
+
+RUN poetry install $(test "$YOUR_ENV" == production && echo "--no-dev")
 
 EXPOSE 8080
 
