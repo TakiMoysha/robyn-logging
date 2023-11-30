@@ -1,10 +1,10 @@
 FROM python:3.11-bookworm
 
-WORKDIR /app
+WORKDIR /workspace
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY . /app
+COPY . /workspace/
 
 EXPOSE 8080
 
