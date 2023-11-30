@@ -22,5 +22,6 @@ async def logger(request: Request):
     return TEMPLATES.render_template(template_name="logging.html", **context)
 
 if __name__ == "__main__":
-    ROBYN_PORT = os.getenv("ROBYN_PORT") or 8080
+    print("Starting server...")
+    ROBYN_PORT = int(os.getenv("ROBYN_PORT")) or 8080
     app.start(host="0.0.0.0", port=ROBYN_PORT)
