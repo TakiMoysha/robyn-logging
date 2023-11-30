@@ -8,4 +8,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["python3", "app.py", "--log-level=WARN"]
+CMD ["python3", "main.py", "--log-level=WARN"]
